@@ -2,10 +2,28 @@
 //
 
 #include <iostream>
+#include "Playlist.h"
+#include "Song.h"
+#include <string>
+#include <list>
+using namespace std;
 
 int main()
 {
-    std::cout << "Hello World!\n";
+   int user_choice = -1;
+   list<Playlist>musicList;
+   while (user_choice != 0) {
+      cout << "MENU \n"
+         << "0. QUIT"
+         << "1. Add new Playlist"
+         << "2. Delete a Playlist"
+         << "3. Add new Song to Playlist"
+         << "4. Remove a Song from a Playlist"
+         << "5. View a playlist"
+         << "6. View the entire music library"
+         << "Please select a menu item:";
+         cin >> user_choice;
+   }
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu

@@ -139,7 +139,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Playlist.cpp" />
     <ClCompile Include="PlaylistMaker.cpp" />
+    <ClCompile Include="Song.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Playlist.h" />
+    <ClInclude Include="Song.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
