@@ -14,7 +14,6 @@ private:
 public:
 	Playlist();
 	Playlist(const Playlist& copy);
-	~Playlist();
 	void setPlaylist();
 	void getPlaylist();
 };

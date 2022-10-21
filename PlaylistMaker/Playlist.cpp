@@ -19,12 +19,6 @@ Playlist::Playlist(const Playlist& copy)
 	length = copy.length;
 }
 
-Playlist::~Playlist()
-{
-	cout << "The playlist has been removed" << endl;
-
-}
-
 
 void Playlist::setPlaylist()
 {
