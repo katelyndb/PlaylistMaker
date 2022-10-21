@@ -20,7 +20,7 @@ Playlist::Playlist(const Playlist& copy)
 }
 
 
-void Playlist::setPlaylist()
+void Playlist::createPlaylist()
 {
 	cout << "Enter Name of Playlist: ";
 	cin >> name;
@@ -31,7 +31,7 @@ void Playlist::setPlaylist()
 
 }
 
-void Playlist::getPlaylist()
+void Playlist::displayPlaylist()
 {
 	cout << ".--------." << endl;
 	cout << name << endl;

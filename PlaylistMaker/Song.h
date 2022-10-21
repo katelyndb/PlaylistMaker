@@ -12,16 +12,16 @@ private:
 	string album;
 public:
 	Song();
-	void setSongName(string name);
-	void setSongArtist(string artist);
-	void setSongLengthSec(int length);
-	void setSongGenre(string genre);
-	void setSongAlbum(string album);
-	void getSongName();
-	void getSongArtist();
-	void getSongLengthSec();
-	void getSongGenre();
-	void getSongAlbum();
+	void setSongName(string name) { this->name = name; }
+	void setSongArtist(string artist) { this->artist = artist; }
+	void setSongLengthSec(int length) { lengthSec = length; };
+	void setSongGenre(string genre) { this->genre = genre; }
+	void setSongAlbum(string album) { this->album = album; }
+	string getSongName() { return name; }
+	string getSongArtist() { return artist; }
+	int getSongLengthSec() { return lengthSec; }
+	string getSongGenre() { return genre; }
+	string getSongAlbum() { return album; }
 
 };
 
