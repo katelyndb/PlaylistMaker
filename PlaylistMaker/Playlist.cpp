@@ -20,26 +20,3 @@ Playlist::Playlist(const Playlist& copy)
 }
 
 
-void Playlist::createPlaylist()
-{
-	cout << "Enter Name of Playlist: ";
-	cin >> name;
-	cout << "Enter Name of Author: ";
-	cin >> author;
-	cout << "Enter Description of Playlist: ";
-	cin >> description;
-
-}
-
-void Playlist::displayPlaylist()
-{
-	cout << ".--------." << endl;
-	cout << name << endl;
-	cout << "Author: " << author << endl;
-	cout << "Description: " << author << endl;
-	cout << "INSERT SONGS RIGHT HERE!!!!" << endl;
-	cout << "Length: " << length << endl;
-	cout << ".--------." << endl;
-	
-}
-

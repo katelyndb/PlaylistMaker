@@ -23,8 +23,78 @@ int main()
          << "6. View the entire music library"
          << "Please select a menu item:";
          cin >> user_choice;
+
+			if (user_response == 0)
+			{
+				exit();
+			}
+			if (user_response == 1)
+			{
+				Playlist new_playlist;
+				cout << "Enter Name of Playlist: ";
+				cin >> name;
+				this.setPlaylistName(name);
+				cout << "Enter Name of Author: ";
+				cin >> author;
+				this.setPlaylistAuthor(author);
+				cout << "Enter Description of Playlist: ";
+				cin >> description;
+				this.setPlaylistDescription(description);
+				musicList.push_back(new_playlist);
+				cout << "The Playlist -" << this->name << "- has been created";
+			}
+			if (user_response == 2)
+			{
+			
+			}
+			if (user_response == 3)
+			{
+				for (Account a : accountList)
+					a.displayBalance();
+			}
+			if (user_response == 4)
+			{
+				for (Account a : accountList)
+					a.displayBalance();
+			}
+			if (user_response == 5)
+			{
+				for (Account a : accountList)
+					a.displayBalance();
+			}
+			if (user_response == 6)
+			{
+				for (Account a : accountList)
+					a.displayBalance();
+			}
+
    }
 }
+
+
+
+
+
+
+
+void Playlist::createPlaylist()
+{
+	
+
+}
+
+void Playlist::displayPlaylist()
+{
+	cout << ".--------." << endl;
+	cout << name << endl;
+	cout << "Author: " << author << endl;
+	cout << "Description: " << author << endl;
+	cout << "INSERT SONGS RIGHT HERE!!!!" << endl;
+	cout << "Length: " << length << endl;
+	cout << ".--------." << endl;
+
+}
+
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
 // Debug program: F5 or Debug > Start Debugging menu

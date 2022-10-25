@@ -14,6 +14,12 @@ private:
 public:
 	Playlist();
 	Playlist(const Playlist& copy);
-	void createPlaylist();
-	void displayPlaylist();
+	void setPlaylistName(string name) { this->name = name; }
+	void setPlaylistAuthor(string author) { this->author = author; }
+	void setPlaylistDescription(string description) { this->description = description; }
+	void setPlaylistLengthSec(int length) { lengthSec = length; };
+	string getPlaylistName() { return name; }
+	string getPlaylistAuthor() { return author; }
+	string getPlaylistDescription() { return Description; }
+	int getPlaylistLengthSec() { return lengthSec; }
 };
