@@ -73,7 +73,11 @@ int main()
 						::tolower);
 					if (userText == playlistName) {
 
-						//delete dObject;
+						cout << "Yep it's not deleted yet. But it should be" << endl;
+					}
+					else {
+						break;
+						//cout << "Playlist '" << userText << "' was not found." << endl;
 					}
 				}
 			}
@@ -112,6 +116,10 @@ int main()
 						cout << " Author: " << item.getPlaylistAuthor() << endl;
 						cout << " Mood: " << item.getPlaylistDescription() << endl;
 						cout << "##################" << endl;
+					}
+					else {
+						break;
+						//cout << "Playlist '" << userText << "' was not found." << endl;
 					}
 
 					

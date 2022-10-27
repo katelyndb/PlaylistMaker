@@ -10,6 +10,8 @@ Playlist::Playlist()
 }
 
 
+
+
 Playlist::Playlist(const Playlist& copy)
 {
 	name = copy.name;
@@ -18,5 +20,7 @@ Playlist::Playlist(const Playlist& copy)
 	numSongs = copy.numSongs;
 	length = copy.length;
 }
+
+
 
 
