@@ -12,87 +12,74 @@ int main()
 {
    int user_choice = -1;
    list<Playlist>musicList;
+	string userText;
+	int userInt;
    while (user_choice != 0) {
-      cout << "MENU \n"
-         << "0. QUIT"
-         << "1. Add new Playlist"
-         << "2. Delete a Playlist"
-         << "3. Add new Song to Playlist"
-         << "4. Remove a Song from a Playlist"
-         << "5. View a playlist"
-         << "6. View the entire music library"
-         << "Please select a menu item:";
+      cout << "\nMENU \n"
+         << "0. QUIT\n"
+         << "1. Add new Playlist\n"
+         << "2. Delete a Playlist\n"
+         << "3. Add new Song to Playlist\n"
+         << "4. Remove a Song from a Playlist\n"
+         << "5. View a specific Playlist\n"
+			<< "6. View all playlists\n"
+         << "7. View the entire music library\n"
+         << "Please select a menu item:\n";
          cin >> user_choice;
 
-			if (user_response == 0)
+			if (user_choice == 0)
 			{
-				exit();
+				return 0;
 			}
-			if (user_response == 1)
+			if (user_choice == 1)
 			{
 				Playlist new_playlist;
 				cout << "Enter Name of Playlist: ";
-				cin >> name;
-				this.setPlaylistName(name);
+				cin >> userText;
+				new_playlist.setPlaylistName(userText);
 				cout << "Enter Name of Author: ";
-				cin >> author;
-				this.setPlaylistAuthor(author);
-				cout << "Enter Description of Playlist: ";
-				cin >> description;
-				this.setPlaylistDescription(description);
+				cin >> userText;
+				new_playlist.setPlaylistAuthor(userText);
+				cout << "Enter Mood of Playlist (One word): ";
+				cin >> userText;
+				new_playlist.setPlaylistDescription(userText);
 				musicList.push_back(new_playlist);
-				cout << "The Playlist -" << this->name << "- has been created";
+				cout << "The Playlist -" << new_playlist.getPlaylistName() << "- has been created";
 			}
-			if (user_response == 2)
+			if (user_choice == 2)
 			{
-			
 			}
-			if (user_response == 3)
+			if (user_choice == 3)
 			{
-				for (Account a : accountList)
-					a.displayBalance();
 			}
-			if (user_response == 4)
+			if (user_choice == 4)
 			{
-				for (Account a : accountList)
-					a.displayBalance();
 			}
-			if (user_response == 5)
+			if (user_choice == 5)
 			{
-				for (Account a : accountList)
-					a.displayBalance();
+				// Display PLaylists with numbers with Function
+				cout << "Enter name of playlist to view : ";
+				cin >> userInt;
+				if ((userInt) == 0) {
+					
+				}
 			}
-			if (user_response == 6)
+			if (user_choice == 6)
 			{
-				for (Account a : accountList)
-					a.displayBalance();
+				cout << " -All Playlists-"  << endl;
+				for (Playlist item : musicList)
+				{
+					cout << item.getPlaylistName() << endl;
+				}
+			}
+			if (user_choice == 6)
+			{
+
+				/*for (Account a : accountList)
+					a.displayBalance();*/
 			}
 
    }
-}
-
-
-
-
-
-
-
-void Playlist::createPlaylist()
-{
-	
-
-}
-
-void Playlist::displayPlaylist()
-{
-	cout << ".--------." << endl;
-	cout << name << endl;
-	cout << "Author: " << author << endl;
-	cout << "Description: " << author << endl;
-	cout << "INSERT SONGS RIGHT HERE!!!!" << endl;
-	cout << "Length: " << length << endl;
-	cout << ".--------." << endl;
-
 }
 
 
