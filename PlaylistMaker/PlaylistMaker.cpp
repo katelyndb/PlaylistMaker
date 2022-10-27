@@ -72,7 +72,7 @@ int main()
 						playlistName.begin(),
 						::tolower);
 					if (userText == playlistName) {
-
+						/*musicList.remove(item);*/
 						cout << "Yep it's not deleted yet. But it should be" << endl;
 					}
 					else {
@@ -117,11 +117,6 @@ int main()
 						cout << " Mood: " << item.getPlaylistDescription() << endl;
 						cout << "##################" << endl;
 					}
-					else {
-						break;
-						//cout << "Playlist '" << userText << "' was not found." << endl;
-					}
-
 					
 				}
 				
