@@ -4,6 +4,7 @@
 #include <iostream>
 #include "Playlist.h"
 #include "Song.h"
+#include <algorithm>
 #include <string>
 #include <list>
 using namespace std;
@@ -33,6 +34,7 @@ int main()
 			}
 			if (user_choice == 1)
 			{
+				cout << "----------" << endl;
 				Playlist new_playlist;
 				cout << "Enter Name of Playlist: ";
 				cin >> userText;
@@ -44,10 +46,36 @@ int main()
 				cin >> userText;
 				new_playlist.setPlaylistDescription(userText);
 				musicList.push_back(new_playlist);
-				cout << "The Playlist -" << new_playlist.getPlaylistName() << "- has been created";
+				cout << "The Playlist -" << new_playlist.getPlaylistName() << "- has been created" << endl;
+				cout << "----------" << endl;
 			}
 			if (user_choice == 2)
 			{
+				cout << "---PLAYLISTS---" << endl;
+				for (Playlist item : musicList)
+				{
+					cout << item.getPlaylistName() << endl;
+				}
+				cout << "---------------" << endl;
+				cout << "Enter name of playlist to Delete : " << endl;
+				cin >> userText;
+				string playlistName;
+				for (Playlist item : musicList)
+				{
+					playlistName = item.getPlaylistName();
+					transform(userText.begin(),
+						userText.end(),
+						userText.begin(),
+						::tolower);
+					transform(playlistName.begin(),
+						playlistName.end(),
+						playlistName.begin(),
+						::tolower);
+					if (userText == playlistName) {
+
+						//delete dObject;
+					}
+				}
 			}
 			if (user_choice == 3)
 			{
@@ -57,12 +85,38 @@ int main()
 			}
 			if (user_choice == 5)
 			{
-				// Display PLaylists with numbers with Function
+				// Display Playlists with numbers with Function
+				cout << "---PLAYLISTS---" << endl;
+				for (Playlist item : musicList)
+				{
+					cout << item.getPlaylistName() << endl;
+				}
+				cout << "---------------" << endl;
 				cout << "Enter name of playlist to view : ";
-				cin >> userInt;
-				if ((userInt) == 0) {
+				cin >> userText;
+				string playlistName;
+				for (Playlist item : musicList)
+				{
+					playlistName = item.getPlaylistName();
+					transform(userText.begin(),
+						userText.end(),
+						userText.begin(),
+						::tolower);
+					transform(playlistName.begin(),
+						playlistName.end(),
+						playlistName.begin(),
+						::tolower);
+					if (userText == playlistName) {
+						cout << "##################" << endl;
+						cout << " Name: " << item.getPlaylistName() << endl;
+						cout << " Author: " << item.getPlaylistAuthor() << endl;
+						cout << " Mood: " << item.getPlaylistDescription() << endl;
+						cout << "##################" << endl;
+					}
+
 					
 				}
+				
 			}
 			if (user_choice == 6)
 			{
@@ -72,24 +126,17 @@ int main()
 					cout << item.getPlaylistName() << endl;
 				}
 			}
-			if (user_choice == 6)
+			if (user_choice == 7)
 			{
-
-				/*for (Account a : accountList)
-					a.displayBalance();*/
+				for (Playlist item : musicList)
+				{
+					cout << "******************" << endl;
+					cout << " Name: " << item.getPlaylistName() << endl;
+					cout << " Author: " << item.getPlaylistAuthor() << endl;
+					cout << " Mood: " << item.getPlaylistDescription() << endl;
+					cout << "******************" << endl;
+				}
 			}
 
    }
 }
-
-
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
-
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
