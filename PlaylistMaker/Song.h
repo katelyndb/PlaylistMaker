@@ -22,6 +22,7 @@ public:
 	int getSongLengthSec() { return lengthSec; }
 	string getSongGenre() { return genre; }
 	string getSongAlbum() { return album; }
+	void displaySong();
 
 };
 

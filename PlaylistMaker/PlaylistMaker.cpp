@@ -1,6 +1,5 @@
 // PlaylistMaker.cpp : This file contains the 'main' function. Program execution begins and ends there.
 //
-
 #include <iostream>
 #include "Playlist.h"
 #include "Song.h"
@@ -21,10 +20,9 @@ int main()
          << "1. Add new Playlist\n"
          << "2. Delete a Playlist\n"
          << "3. Add new Song to Playlist\n"
-         << "4. Remove a Song from a Playlist\n"
-         << "5. View a specific Playlist\n"
-			<< "6. View all playlists\n"
-         << "7. View the entire music library\n"
+         << "4. View a specific Playlist\n"
+			<< "5. View all playlists\n"
+         << "6. View the entire music library\n"
          << "Please select a menu item:\n";
          cin >> user_choice;
 
@@ -63,6 +61,31 @@ int main()
 				for (Playlist item : musicList)
 				{
 					playlistName = item.getPlaylistName();
+					//transform(userText.begin(),
+					//	userText.end(),
+					//	userText.begin(),
+					//	::tolower);
+					musicList.erase(remove_if(musicList.begin(), musicList.end(), [userText](Playlist p) {return p.getPlaylistName() == userText; }), musicList.end());
+					//cout << "Yep it's not deleted yet. But it should be" << endl;
+					/*if (userText == playlistName) {
+						musicList.remove(item<Playlist>);
+						cout << "Yep it's not deleted yet. But it should be" << endl;
+					//}*/
+					//else {
+					//	cout << "Playlist '" << userText << "' was not found." << endl;
+					//	break;
+					//	
+					//}
+				}
+			}
+			if (user_choice == 3)
+			{
+				cout << "Enter name of playlist to add a song to : ";
+				cin >> userText;
+				string playlistName;
+				for (Playlist item : musicList)
+				{
+					playlistName = item.getPlaylistName();
 					transform(userText.begin(),
 						userText.end(),
 						userText.begin(),
@@ -72,22 +95,11 @@ int main()
 						playlistName.begin(),
 						::tolower);
 					if (userText == playlistName) {
-						/*musicList.remove(item);*/
-						cout << "Yep it's not deleted yet. But it should be" << endl;
-					}
-					else {
-						break;
-						//cout << "Playlist '" << userText << "' was not found." << endl;
+						item.addSong();
 					}
 				}
 			}
-			if (user_choice == 3)
-			{
-			}
 			if (user_choice == 4)
-			{
-			}
-			if (user_choice == 5)
 			{
 				// Display Playlists with numbers with Function
 				cout << "---PLAYLISTS---" << endl;
@@ -115,13 +127,18 @@ int main()
 						cout << " Name: " << item.getPlaylistName() << endl;
 						cout << " Author: " << item.getPlaylistAuthor() << endl;
 						cout << " Mood: " << item.getPlaylistDescription() << endl;
+						if (true){
+							cout << "---Songs---" << endl;
+							item.displaySongList();
+							cout << "__________________" << endl;
+						}
 						cout << "##################" << endl;
 					}
 					
 				}
 				
 			}
-			if (user_choice == 6)
+			if (user_choice == 5)
 			{
 				cout << " -All Playlists-"  << endl;
 				for (Playlist item : musicList)
@@ -129,7 +146,7 @@ int main()
 					cout << item.getPlaylistName() << endl;
 				}
 			}
-			if (user_choice == 7)
+			if (user_choice == 6)
 			{
 				for (Playlist item : musicList)
 				{
