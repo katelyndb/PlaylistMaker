@@ -20,13 +20,11 @@ I used the C++ Language for this software
 # Useful Websites
 
 {Make a list of websites that you found helpful in this project}
-* [cplusplus]([http://url.link.goes.here](https://cplusplus.com/doc/tutorial/))
-* [W3Schools]([http://url.link.goes.here](https://www.w3schools.com/cpp/default.asp))
-* [Programiz]([http://url.link.goes.here]([https://www.w3schools.com/cpp/default.asp](https://www.programiz.com/cpp-programming/object-class)))
+* [cplusplus]([https://cplusplus.com/doc/tutorial/])
+* [W3Schools]([https://www.w3schools.com/cpp/default.asp])
+* [Programiz]([https://www.programiz.com/cpp-programming/object-class])
 
 # Future Work
 
-{Make a list of things that you need to fix, improve, and add in the future.}
-* Item 1
-* Item 2
-* Item 3
+* Add functionality to see specific genres
+* Entire music library view only shows songs alphabetically
