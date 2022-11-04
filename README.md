@@ -5,7 +5,7 @@ This program is a application of my knowledge of the the C++ language. I am furt
 This software allows users to create playlists and add songs to individual playlists. A user can also remove playlists, remove individual songs, and display the entire music library or all playlists.
 
 
-{Describe your purpose for writing this software.}
+I wrote this software to explore an idea that I had and expose myself to new programming languages.
 
 {Provide a link to your YouTube demonstration.  It should be a 4-5 minute demo of the software running and a walkthrough of the code.  Focus should be on sharing what you learned about the language syntax.}
 
