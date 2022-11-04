@@ -80,6 +80,11 @@ int main()
 			}
 			if (user_choice == 3)
 			{
+				cout << "---PLAYLISTS---" << endl;
+				for (Playlist item : musicList)
+				{
+					cout << item.getPlaylistName() << endl;
+				}
 				cout << "Enter name of playlist to add a song to : ";
 				cin >> userText;
 				string playlistName;
