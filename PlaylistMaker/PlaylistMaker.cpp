@@ -83,7 +83,7 @@ int main()
 				cout << "Enter name of playlist to add a song to : ";
 				cin >> userText;
 				string playlistName;
-				for (Playlist item : musicList)
+				for (Playlist &item : musicList)
 				{
 					playlistName = item.getPlaylistName();
 					transform(userText.begin(),
@@ -111,7 +111,7 @@ int main()
 				cout << "Enter name of playlist to view : ";
 				cin >> userText;
 				string playlistName;
-				for (Playlist item : musicList)
+				/*for (Playlist item : musicList)
 				{
 					playlistName = item.getPlaylistName();
 					transform(userText.begin(),
@@ -135,7 +135,21 @@ int main()
 						cout << "##################" << endl;
 					}
 					
-				}
+				}*/
+				for_each(musicList.begin(), musicList.end(), [userText](Playlist& list) {
+					if (userText == list.getPlaylistName()) {
+						cout << "##################" << endl;
+						cout << " Name: " << list.getPlaylistName() << endl;
+						cout << " Author: " << list.getPlaylistAuthor() << endl;
+						cout << " Mood: " << list.getPlaylistDescription() << endl;
+						if (list.hasSongs()) {
+							cout << "---Songs---" << endl;
+							list.displaySongList();
+							cout << "__________________" << endl;
+						}
+						cout << "##################" << endl;
+					}
+					});
 				
 			}
 			if (user_choice == 5)

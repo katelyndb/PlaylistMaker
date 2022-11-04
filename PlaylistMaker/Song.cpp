@@ -11,7 +11,7 @@ Song::Song()
 
 void Song::displaySong()
 {
-	cout << "/nName: " << name << endl;
+	cout << "\nName: " << name << endl;
 	cout << "Artist: " << artist << endl;
 	cout << "Genre: " << genre << endl;
 	cout << "Album: " << album << endl;
