@@ -20,7 +20,7 @@ Playlist::Playlist(const Playlist& copy)
 }
 
 void Playlist::addSong()
-{
+{// Gets user input for the song and sets each attribute
 	string songName;
 	string songArtist;
 	string songGenre;
@@ -38,6 +38,7 @@ void Playlist::addSong()
 	newSong.setSongArtist(songArtist);
 	newSong.setSongGenre(songGenre);
 	newSong.setSongAlbum(songAlbum);
+	// Adds the song to the songlist of the playlist
 	this->songList.push_back(newSong);
 
 
@@ -46,6 +47,7 @@ void Playlist::addSong()
 
 void Playlist::displaySongList()
 {
+	// Loops through each song and displays it to the user
 	for (Song item : songList) {
 		item.displaySong();
 	}
