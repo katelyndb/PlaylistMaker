@@ -2,7 +2,7 @@
 
 This program is a application of my knowledge of the the C++ language. I am furthering my experience in this language by creating a playlist maker.
 
-This software allows users to create playlists and add songs to individual playlists. A user can also remove playlists, remove individual songs, and display the entire music library or all playlists.
+This software allows users to create playlists and add songs to individual playlists. A user can also remove playlists, remove individual songs, and display the entire music library or all playlists. Please be aware there is case sensitivity and inputs should not include spaces.
 
 
 I wrote this software to explore an idea that I had and expose myself to new programming languages.
