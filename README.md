@@ -8,7 +8,7 @@ This software allows users to create playlists and add songs to individual playl
 I wrote this software to explore an idea that I had and expose myself to new programming languages.
 
 
-[Software Demo Video](https://youtu.be/APXaHAzpZJU))
+[Software Demo Video](https://youtu.be/APXaHAzpZJU)
 
 # Development Environment
 
@@ -17,8 +17,6 @@ I used the IDE Visual Studio Community and Github
 I used the C++ Language for this software
 
 # Useful Websites
-
-{Make a list of websites that you found helpful in this project}
 * [cplusplus](https://cplusplus.com/doc/tutorial/)
 * [W3Schools](https://www.w3schools.com/cpp/default.asp)
 * [Programiz](https://www.programiz.com/cpp-programming/object-class)
